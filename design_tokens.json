@@ -1,0 +1,63 @@
+{
+  "theme": "Cryptographic Observatory",
+  "philosophy": "A quiet, luxurious cryptographic laboratory where secret languages are designed. Apple + Linear + Arc + Raycast aesthetic with subtle scientific elegance.",
+  "colors": {
+    "canvas": "#F7F5F2",
+    "surface": "#FFFFFF",
+    "surfaceElevated": "#FFFFFF",
+    "surfaceTranslucent": "rgba(255, 255, 255, 0.72)",
+    "textPrimary": "#1E1D24",
+    "textSecondary": "#5B5866",
+    "textMuted": "#8D8999",
+    "borderSubtle": "rgba(110, 92, 168, 0.14)",
+    "borderFocus": "#6E5CA8",
+    "pastels": {
+      "lavender": "#DDD7F5",
+      "sage": "#D8E8DF",
+      "peach": "#F6DDD3",
+      "powderBlue": "#DCEAF5",
+      "warmCream": "#F5EFE6"
+    },
+    "accents": {
+      "primary": "#6E5CA8",
+      "primaryHover": "#5A4992",
+      "success": "#2E7D32",
+      "danger": "#C62828",
+      "warning": "#E65100"
+    }
+  },
+  "typography": {
+    "headings": "'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif",
+    "body": "'Inter', -apple-system, BlinkMacSystemFont, sans-serif",
+    "monospace": "'JetBrains Mono', monospace",
+    "scale": {
+      "display": "2.25rem",
+      "h1": "1.75rem",
+      "h2": "1.35rem",
+      "h3": "1.1rem",
+      "body": "0.95rem",
+      "small": "0.82rem",
+      "caption": "0.72rem"
+    }
+  },
+  "radii": {
+    "card": "28px",
+    "input": "12px",
+    "button": "12px",
+    "modal": "24px",
+    "pill": "9999px"
+  },
+  "shadows": {
+    "card": "0 8px 30px rgba(110, 92, 168, 0.08)",
+    "cardHover": "0 16px 40px rgba(110, 92, 168, 0.16)",
+    "elevated": "0 12px 36px rgba(0, 0, 0, 0.06)",
+    "modal": "0 24px 64px rgba(20, 15, 35, 0.18)"
+  },
+  "motion": {
+    "microInteraction": "150ms cubic-bezier(0.16, 1, 0.3, 1)",
+    "cardLift": "240ms cubic-bezier(0.16, 1, 0.3, 1)",
+    "pageTransition": "450ms cubic-bezier(0.16, 1, 0.3, 1)",
+    "letterFlipInterval": "40ms",
+    "staggerStep": "70ms"
+  }
+}

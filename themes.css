@@ -1,0 +1,294 @@
+/* ==========================================================================
+   AETHERCRYPT // Observatory Design System & 20 Atmospheric Themes
+   "A quiet, luxurious cryptographic observatory"
+   Cream/off-white base -> Pastel lavender/sage/peach surfaces -> Dark charcoal typography
+   ========================================================================== */
+
+:root {
+  /* Default Observatory / Core Theme Tokens */
+  --bg-base: #F7F5F2;
+  --bg-subtle: #F0EDE6;
+  --bg-surface: rgba(255, 255, 255, 0.76);
+  --bg-surface-elevated: rgba(255, 255, 255, 0.92);
+  --bg-input: #FFFFFF;
+  --bg-code: #F5F3EF;
+
+  /* Typography Colors (High contrast, dark readable) */
+  --text-primary: #1E1D24;
+  --text-secondary: #585464;
+  --text-muted: #8E8A98;
+  --text-light: #736F7D;
+
+  /* Editorial Borders */
+  --border-subtle: rgba(30, 29, 36, 0.08);
+  --border-medium: rgba(30, 29, 36, 0.14);
+  --border-focus: #6E5CA8;
+  --border-glass: rgba(255, 255, 255, 0.9);
+
+  /* Primary Accent & Pastels */
+  --accent: #6E5CA8;
+  --accent-hover: #5D4B94;
+  --accent-subtle: rgba(110, 92, 168, 0.08);
+  --accent-glow: rgba(110, 92, 168, 0.22);
+  --accent-surface: #EDE9FE;
+
+  --lavender: #DDD7F5;
+  --lavender-deep: #6E5CA8;
+  --lavender-light: #F4F1FD;
+
+  --sage: #D8E8DF;
+  --sage-deep: #43715C;
+  --sage-light: #EEF6F2;
+
+  --peach: #F6DDD3;
+  --peach-deep: #A85A43;
+  --peach-light: #FDF3EF;
+
+  --dusty-blue: #DCEAF5;
+  --blue-deep: #416B91;
+  --blue-light: #EFF6FC;
+
+  --cream: #F5EFE6;
+  --cream-deep: #8E7A5E;
+
+  /* Semantic State Colors */
+  --success: #3E8A63;
+  --success-bg: #EAF5EF;
+  --warning: #B37D22;
+  --warning-bg: #FDF6E8;
+  --danger: #C04343;
+  --danger-bg: #FDEEEE;
+
+  /* Radii & Shadows */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-xl: 28px;
+  --radius-2xl: 36px;
+
+  --shadow-sm: 0 2px 8px rgba(35, 25, 55, 0.03);
+  --shadow-md: 0 8px 24px -4px rgba(35, 25, 55, 0.06);
+  --shadow-lg: 0 16px 40px -8px rgba(35, 25, 55, 0.07);
+  --shadow-hover: 0 24px 56px -10px rgba(35, 25, 55, 0.11);
+  --shadow-glass: 0 20px 48px rgba(45, 35, 65, 0.06);
+
+  /* Fonts */
+  --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'IBM Plex Mono', Consolas, monospace;
+
+  /* Legacy variables compatibility */
+  --bg: var(--bg-base);
+  --panel: var(--bg-surface);
+  --panel-hover: var(--bg-surface-elevated);
+  --panel-header: var(--bg-surface-elevated);
+  --text: var(--text-primary);
+  --border: var(--border-medium);
+  --card-bg: var(--bg-surface);
+  --input-bg: var(--bg-input);
+}
+
+/* ==========================================================================
+   20 Theme Atmospheric Variations (All tailored for luxury observatory style)
+   ========================================================================== */
+
+/* 1. Pirate Theme */
+body.theme-pirate {
+  --bg-base: #F7F3EC;
+  --accent: #8E652B;
+  --accent-hover: #755221;
+  --accent-surface: #F9EEDB;
+  --accent-glow: rgba(142, 101, 43, 0.2);
+  --border-focus: #8E652B;
+}
+
+/* 2. Cyberpunk 2099 Theme */
+body.theme-cyberpunk {
+  --bg-base: #F6F4FA;
+  --accent: #5D5499;
+  --accent-hover: #4B4286;
+  --accent-surface: #E8E5F8;
+  --accent-glow: rgba(93, 84, 153, 0.22);
+  --border-focus: #5D5499;
+}
+
+/* 3. Ancient Egypt Theme */
+body.theme-ancient_egypt {
+  --bg-base: #F8F5EE;
+  --accent: #9A7426;
+  --accent-hover: #80601E;
+  --accent-surface: #F9F1DC;
+  --accent-glow: rgba(154, 116, 38, 0.2);
+  --border-focus: #9A7426;
+}
+
+/* 4. Medieval Alchemist Theme */
+body.theme-medieval_alchemist {
+  --bg-base: #F7F3EE;
+  --accent: #8F543C;
+  --accent-hover: #76432E;
+  --accent-surface: #FAE8E0;
+  --accent-glow: rgba(143, 84, 60, 0.2);
+  --border-focus: #8F543C;
+}
+
+/* 5. Deep Space Galaxy Theme */
+body.theme-deep_space {
+  --bg-base: #F4F5F9;
+  --accent: #485A9B;
+  --accent-hover: #394880;
+  --accent-surface: #E6EAF8;
+  --accent-glow: rgba(72, 90, 155, 0.2);
+  --border-focus: #485A9B;
+}
+
+/* 6. Steampunk Victorian Theme */
+body.theme-steampunk {
+  --bg-base: #F7F4EE;
+  --accent: #8C6239;
+  --accent-hover: #724E2B;
+  --accent-surface: #F8EEDB;
+  --accent-glow: rgba(140, 98, 57, 0.2);
+  --border-focus: #8C6239;
+}
+
+/* 7. Nordic Elder Futhark Runes */
+body.theme-nordic_runes {
+  --bg-base: #F4F6F5;
+  --accent: #436B63;
+  --accent-hover: #33554E;
+  --accent-surface: #E3EFEA;
+  --accent-glow: rgba(67, 107, 99, 0.2);
+  --border-focus: #436B63;
+}
+
+/* 8. Biohazard Lab Theme */
+body.theme-biohazard {
+  --bg-base: #F6F7F3;
+  --accent: #657D28;
+  --accent-hover: #50641E;
+  --accent-surface: #EFF4DC;
+  --accent-glow: rgba(101, 125, 40, 0.2);
+  --border-focus: #657D28;
+}
+
+/* 9. Matrix Digital Rain Theme */
+body.theme-matrix {
+  --bg-base: #F3F7F4;
+  --accent: #337A55;
+  --accent-hover: #266143;
+  --accent-surface: #E2F2E8;
+  --accent-glow: rgba(51, 122, 85, 0.2);
+  --border-focus: #337A55;
+}
+
+/* 10. Gothic Victorian Theme */
+body.theme-gothic_victorian {
+  --bg-base: #F6F4F5;
+  --accent: #6D4C63;
+  --accent-hover: #583C50;
+  --accent-surface: #F3E5EE;
+  --accent-glow: rgba(109, 76, 99, 0.2);
+  --border-focus: #6D4C63;
+}
+
+/* 11. Atlantis Abyssal Theme */
+body.theme-atlantis_ocean {
+  --bg-base: #F2F7F8;
+  --accent: #2E7385;
+  --accent-hover: #225C6B;
+  --accent-surface: #DEF0F4;
+  --accent-glow: rgba(46, 115, 133, 0.2);
+  --border-focus: #2E7385;
+}
+
+/* 12. Feudal Samurai Theme */
+body.theme-feudal_samurai {
+  --bg-base: #F8F4F4;
+  --accent: #944648;
+  --accent-hover: #793739;
+  --accent-surface: #F9E4E4;
+  --accent-glow: rgba(148, 70, 72, 0.2);
+  --border-focus: #944648;
+}
+
+/* 13. Witchcraft Occult Theme */
+body.theme-witchcraft_occult {
+  --bg-base: #F5F3F7;
+  --accent: #6C4F85;
+  --accent-hover: #563E6B;
+  --accent-surface: #EFE4F9;
+  --accent-glow: rgba(108, 79, 133, 0.2);
+  --border-focus: #6C4F85;
+}
+
+/* 14. Alien Hivemind Theme */
+body.theme-alien_hive {
+  --bg-base: #F4F6F4;
+  --accent: #487352;
+  --accent-hover: #375C40;
+  --accent-surface: #E4EFE6;
+  --accent-glow: rgba(72, 115, 82, 0.2);
+  --border-focus: #487352;
+}
+
+/* 15. Aztec Sun Temple Theme */
+body.theme-aztec_sun {
+  --bg-base: #F8F4EE;
+  --accent: #9A6626;
+  --accent-hover: #7D521D;
+  --accent-surface: #FAE9D7;
+  --accent-glow: rgba(154, 102, 38, 0.2);
+  --border-focus: #9A6626;
+}
+
+/* 16. Post-Apocalyptic Theme */
+body.theme-post_apocalyptic {
+  --bg-base: #F6F4F1;
+  --accent: #7D634C;
+  --accent-hover: #644E3B;
+  --accent-surface: #EDE3DC;
+  --accent-glow: rgba(125, 99, 76, 0.2);
+  --border-focus: #7D634C;
+}
+
+/* 17. Neon Synthwave 80s Theme */
+body.theme-neon_synthwave {
+  --bg-base: #F7F3F6;
+  --accent: #87497A;
+  --accent-hover: #6E3A63;
+  --accent-surface: #F8E3F2;
+  --accent-glow: rgba(135, 73, 122, 0.2);
+  --border-focus: #87497A;
+}
+
+/* 18. Quantum Realm Theme */
+body.theme-quantum_realm {
+  --bg-base: #F3F5FA;
+  --accent: #3E639E;
+  --accent-hover: #2F4E81;
+  --accent-surface: #E2EAF8;
+  --accent-glow: rgba(62, 99, 158, 0.2);
+  --border-focus: #3E639E;
+}
+
+/* 19. Cryptid Redwood Theme */
+body.theme-cryptid_woods {
+  --bg-base: #F4F6F2;
+  --accent: #4B6B46;
+  --accent-hover: #3A5536;
+  --accent-surface: #E4EFE1;
+  --accent-glow: rgba(75, 107, 70, 0.2);
+  --border-focus: #4B6B46;
+}
+
+/* 20. Celestial Empyrean Theme */
+body.theme-celestial_angels {
+  --bg-base: #F8F7F4;
+  --accent: #8E7A4A;
+  --accent-hover: #76643B;
+  --accent-surface: #F9F2E2;
+  --accent-glow: rgba(142, 122, 74, 0.2);
+  --border-focus: #8E7A4A;
+}

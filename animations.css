@@ -1,0 +1,301 @@
+/* ==========================================================================
+   AETHERCRYPT // Sophisticated Motion Design & Cryptographic Transforms
+   ========================================================================== */
+
+/* 1. View Transitions */
+.view-container {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.45s cubic-bezier(0.16, 1, 0.3, 1), transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  display: none !important;
+}
+
+.view-container.active-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.view-auth-wrapper.active-view {
+  display: flex !important;
+}
+
+.view-home-wrapper.active-view {
+  display: flex !important;
+}
+
+.view-workspace-wrapper.active-view {
+  display: flex !important;
+}
+
+/* 2. Staggered Entrance Animations for Home Cards */
+@keyframes cardEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(28px) scale(0.98);
+    filter: blur(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+.mode-card.enter-stagger-1 {
+  animation: cardEntrance 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.05s both;
+}
+
+.mode-card.enter-stagger-2 {
+  animation: cardEntrance 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.18s both;
+}
+
+.mode-card.enter-stagger-3 {
+  animation: cardEntrance 0.65s cubic-bezier(0.16, 1, 0.3, 1) 0.31s both;
+}
+
+/* 3. Subtle Ambient Background Float */
+@keyframes floatOrb1 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -25px) scale(1.04); }
+  66% { transform: translate(-20px, 20px) scale(0.96); }
+}
+
+@keyframes floatOrb2 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(-25px, 20px) scale(0.98); }
+  66% { transform: translate(35px, -30px) scale(1.05); }
+}
+
+@keyframes floatOrb3 {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(25px, -20px) scale(1.03); }
+}
+
+.ambient-orb-1 {
+  animation: floatOrb1 24s ease-in-out infinite;
+}
+
+.ambient-orb-2 {
+  animation: floatOrb2 28s ease-in-out infinite;
+}
+
+.ambient-orb-3 {
+  animation: floatOrb3 22s ease-in-out infinite;
+}
+
+/* 4. Floating Faint Cipher Glyphs in Background */
+@keyframes floatGlyph {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-12px) rotate(4deg); }
+}
+
+.floating-glyph {
+  position: absolute;
+  pointer-events: none;
+  font-family: var(--font-mono);
+  user-select: none;
+  color: var(--text-primary);
+  opacity: 0.045;
+  transition: opacity 0.3s ease;
+  animation: floatGlyph 9s ease-in-out infinite;
+}
+
+/* 5. 3D Flipping Token Card Container & Mechanical Decryption Reel */
+.flip-token-container {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  perspective: 1200px;
+  font-family: var(--font-mono);
+  font-size: 1.3rem;
+  line-height: 1.6;
+  min-height: 90px;
+}
+
+.flip-token {
+  position: relative;
+  display: inline-block;
+  min-width: 28px;
+  height: 38px;
+  transform-style: preserve-3d;
+  transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+  vertical-align: middle;
+}
+
+.flip-token.flipped {
+  transform: rotateY(180deg);
+}
+
+.flip-token-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  border-radius: 8px;
+  padding: 0 6px;
+  box-sizing: border-box;
+  font-weight: 600;
+}
+
+.flip-token-front {
+  background: var(--surface-solid);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  transform: rotateY(0deg);
+  box-shadow: 0 2px 6px rgba(40, 30, 60, 0.04);
+}
+
+.flip-token-back {
+  background: var(--lavender-light);
+  border: 1px solid var(--lavender);
+  color: var(--accent);
+  box-shadow: 0 4px 12px var(--accent-glow);
+  transform: rotateY(180deg);
+}
+
+@keyframes mechanicalReel {
+  0% {
+    transform: translateY(-80%);
+    opacity: 0;
+    filter: blur(2px);
+  }
+  50% {
+    opacity: 0.7;
+    filter: blur(1px);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.reel-active {
+  animation: mechanicalReel 0.3s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+/* 6. Corrupted Scrambler Alert Glitch */
+@keyframes subtleGlitch {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(-1px, 1px); }
+  50% { transform: translate(1px, -1px); }
+  75% { transform: translate(-1px, -1px); }
+}
+
+.corrupted-alert.active {
+  display: flex;
+  animation: subtleGlitch 0.5s ease-in-out infinite;
+}
+
+/* 7. Alphabet Grid Card Highlight & Click Match */
+.highlight-match {
+  background: var(--accent) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 0 12px var(--accent-glow) !important;
+  border-radius: 6px;
+  padding: 1px 4px;
+  transform: scale(1.08);
+  transition: all 0.15s ease-in-out;
+  display: inline-block;
+  font-weight: bold;
+}
+
+/* 8. Sequential Reveal Cascade for AI Alphabet Generation ("The WOW Moment") */
+@keyframes glyphRevealCascade {
+  0% {
+    opacity: 0;
+    transform: scale(0.6) translateY(12px);
+    filter: blur(6px);
+  }
+  60% {
+    transform: scale(1.1) translateY(-2px);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.cascade-reveal {
+  animation: glyphRevealCascade 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+/* 9. Card Illustration Subtle Float */
+@keyframes illustrationDrift {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.illustration-float {
+  animation: illustrationDrift 6s ease-in-out infinite;
+}
+
+/* 10. Concentric Caesar Ring Smooth Rotation */
+.rotating-ring {
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* 11. Pulse Badge Indicator */
+@keyframes pulseDot {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.6;
+  }
+}
+
+.pulse-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--success);
+  box-shadow: 0 0 8px rgba(62, 138, 99, 0.5);
+  animation: pulseDot 2s ease-in-out infinite;
+}
+
+/* 11b. Alphabet Reveal Pop Animation */
+@keyframes alphabetCardPop {
+  0% {
+    opacity: 0;
+    transform: translateY(14px) scale(0.88);
+  }
+  70% {
+    transform: translateY(-2px) scale(1.03);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* 12. Accessibility: Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .ambient-orb-1,
+  .ambient-orb-2,
+  .ambient-orb-3,
+  .floating-glyph,
+  .illustration-float,
+  .pulse-dot {
+    animation: none !important;
+  }
+}

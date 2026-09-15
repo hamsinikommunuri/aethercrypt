@@ -1,0 +1,9 @@
+node_modules
+npm-debug.log
+.git
+.agents
+.env
+.DS_Store
+*.png
+*.pdf
+ciphers.db-journal
